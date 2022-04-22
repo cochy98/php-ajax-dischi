@@ -24,7 +24,7 @@
 <body>
   <?php include_once __DIR__ . '/partials/header.php'; ?>
   <?php include_once __DIR__ . '/server/data.php'; ?>
-  <main>
+  <main id="app">
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 py-5">
         <!-- Single card -->
