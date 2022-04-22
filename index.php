@@ -27,22 +27,20 @@
   <main id="app">
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 py-5">
-        <!-- Single card -->
-        <?php foreach($discs as $disc){ ?>
-          <div class="col">
+        <!-- Single card che viene ciclata con v-for -->
+          <div class="col" v-for="disc in discList">
             <div class="card h-100 text-center">
-              <img class="card-img-top" src="<?= $disc['poster'] ?>" alt="<?= $disc['title'] ?>" />
+              <img class="card-img-top" :src="disc.poster" :alt="disc.title" />
               <div class="card-body">
-                <h3 class="card-title"><?= $disc['title'] ?></h3>
+                <h3 class="card-title">{{ disc.title }}</h3>
               </div>
               <div class="card-footer">
-                <p class="card-text m-0"><?= $disc['author'] ?></p>
-                <p class="card-text"><?= $disc['year'] ?></p>
+                <p class="card-text m-0">{{ disc.author }}</p>
+                <p class="card-text">{{ disc.year }}</p>
               </div>
             </div>
           </div>
-        <?php } ?>
-        <!-- /Single card -->
+        <!-- /Single card che viene ciclata con v-for -->
       </div>
     </div>
 
