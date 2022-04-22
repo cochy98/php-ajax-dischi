@@ -1,3 +1,45 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+/* Background color per l'header' */
+header nav.navbar {
+  background-color: #2e3a46;
+}
+
+/* Larghezza fissa per il logo dell'header */
+header nav.navbar img {
+  width: 50px;
+}
+
+main {
+  height: calc(100vh - 76px);
+  background-color: #1e2d3b;
+  overflow-y: auto;
+}
+
+div.card {
+  background-color: #2e3a46;
+  border: none;
+  border-radius: 0;
+}
+
+div.card>img.card-img-top {
+  padding: 1.1rem;
+}
+
+div.card>.card-body h3.card-title {
+  text-transform: uppercase;
+  color: white;
+}
+
+div.card>.card-footer {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-top: none;
+  padding: 2rem;
+}
+
+.card-footer>p.card-text {
+  color: #8b8d84;
+}
