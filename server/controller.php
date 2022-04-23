@@ -9,7 +9,7 @@ $filteredDiscs = [];
 header('Content-Type: application/json');
 
 /* Se ricevo tramite GET il genere da filtrare */
-if(isset($_GET['genre'])){
+if((isset($_GET['genre'])) && ($_GET['genre'] != '')){
 
   # Ciclo per tutto l'array dei dischi
   foreach ($discs as $disc) {

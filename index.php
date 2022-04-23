@@ -22,29 +22,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 </head>
 <body>
-  <?php include_once __DIR__ . '/partials/header.php'; ?>
-  <?php include_once __DIR__ . '/server/data.php'; ?>
-  <main id="app">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 py-5">
-        <!-- Single card che viene ciclata con v-for -->
-          <div class="col" v-for="disc in discList">
-            <div class="card h-100 text-center">
-              <img class="card-img-top" :src="disc.poster" :alt="disc.title" />
-              <div class="card-body">
-                <h3 class="card-title">{{ disc.title }}</h3>
-              </div>
-              <div class="card-footer">
-                <p class="card-text m-0">{{ disc.author }}</p>
-                <p class="card-text">{{ disc.year }}</p>
+  <div id="app">
+    <?php include_once __DIR__ . '/partials/header.php'; ?>
+    <?php include_once __DIR__ . '/server/data.php'; ?>
+    <main>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 py-5">
+          <!-- Single card che viene ciclata con v-for -->
+            <div class="col" v-for="disc in discList">
+              <div class="card h-100 text-center">
+                <img class="card-img-top" :src="disc.poster" :alt="disc.title" />
+                <div class="card-body">
+                  <h3 class="card-title">{{ disc.title }}</h3>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text m-0">{{ disc.author }}</p>
+                  <p class="card-text">{{ disc.year }}</p>
+                </div>
               </div>
             </div>
-          </div>
-        <!-- /Single card che viene ciclata con v-for -->
+          <!-- /Single card che viene ciclata con v-for -->
+        </div>
       </div>
-    </div>
-
-  </main>
+  
+    </main>
+  </div>
   <!-- Importo il custom JS -->
   <script src="js/script.js"></script>
 </body>
