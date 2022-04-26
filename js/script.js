@@ -19,10 +19,6 @@ const app = new Vue({
       });
   },
   methods: {
-    /* Questo metodo setta il nuovo valore per 'selectedGenre' */
-    getGenre(v) {
-      this.selectedGenre = v.target.options[v.target.options.selectedIndex].value;
-    },
     changeGenre() {
       console.log('ok, mostro solo i brani corrispondenti al genere selezionato: ' + this.selectedGenre);
       /* Resetto il mio array contentente i dischi prima di fare la chiamata all'API */

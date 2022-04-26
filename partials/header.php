@@ -5,7 +5,7 @@
         <img src="img/logo-small.svg" alt="Spotify Logo" />
       </a>
       <div class="d-flex">
-        <select class="form-select me-2" @change="getGenre">
+        <select class="form-select me-2" v-model="selectedGenre">
           <option value="" selected>All</option>
           <option value="Rock">Rock</option>
           <option value="Pop">Pop</option>
